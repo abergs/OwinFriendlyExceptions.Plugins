@@ -15,6 +15,9 @@ Install the package, and supply the WebApi Exception Provider to the OwinFriendl
 In order for the Plugin to get swallowed exceptions you have to replace the ExcepionHandler service in Web Api.
 The plugin takes a list of which exceptions we can handle (that same collection fed to the middleware itself), so WebApi can still take care of unhandled exceptions for you.
 
+### Troubleshooting
+When installing the Web Api Plugin, sometimes your System.Web.Http reference will mismatch. Use this Package Manager Console command to fix your Assembly Bining redirect:   `Get-Project YourProjectReferencingOwinFriendlyExceptions | Add-BindingRedirect`
+
 ### Contribute
 Contributions are welcome. Just open an Issue or submit a PR. 
 
